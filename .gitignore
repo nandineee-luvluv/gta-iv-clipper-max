@@ -1,0 +1,39 @@
+# Local configuration and credentials
+config.json
+.env
+.env.*
+!.env.example
+*.token
+*credentials*.json
+*oauth*.json
+cookies.txt
+
+# Runtime state and media
+state/
+captures/
+library/
+logs/
+output/
+uploads/
+*.sqlite
+*.sqlite3
+*.db
+*.db-*
+*.mp4
+*.mkv
+*.ts
+*.m4a
+*.srt
+*.vtt
+*.jpg
+*.jpeg
+*.png
+
+# Python / editor artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.idea/
+.vscode/

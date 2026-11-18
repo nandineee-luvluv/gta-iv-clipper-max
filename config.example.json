@@ -1,0 +1,82 @@
+{
+  "tools": {
+    "ffmpeg": "",
+    "ffprobe": "",
+    "lib_dir": "",
+    "streamlink": ""
+  },
+  "clippyme": {
+    "base_url": "http://127.0.0.1:8000",
+    "output_dir": "../clippyme/output",
+    "python": "../clippyme/.venv/bin/python",
+    "cookies": "../clippyme/data/cookies.txt",
+    "poll_seconds": 8
+  },
+  "capture": {
+    "segment_seconds": 60,
+    "min_chunk_seconds": 15,
+    "max_height": 720,
+    "stall_timeout_seconds": 180,
+    "retry_backoff_seconds": 45,
+    "max_session_failures": 8,
+    "max_concurrent_streams": 4,
+    "disk_guard_free_gb": 8,
+    "prelive_skip_seconds": 0,
+    "live_edge": 2,
+    "keep_source_seconds": 1800
+  },
+  "chat": {
+    "enabled": true,
+    "window_seconds": 10,
+    "baseline_windows": 12,
+    "min_history": 3,
+    "min_baseline": 2.0,
+    "spike_multiplier": 3.0,
+    "spike_min_messages": 8,
+    "cooldown_seconds": 90,
+    "pre_seconds": 20,
+    "post_seconds": 10,
+    "poll_seconds": 3,
+    "max_clip_seconds": 59,
+    "spike_rise_fraction": 0.75,
+    "spike_min_rise": 6.0
+  },
+  "probe": {
+    "timeout_seconds": 180,
+    "upcoming_poll_seconds": 240,
+    "retry_seconds": 120,
+    "max_attempts": 30
+  },
+  "analysis": {
+    "aspect": "9:16",
+    "reframe_mode": "auto",
+    "language": "en",
+    "instructions": "Select a self-contained GTA VI moment from this stream. Prefer an accurate title and concise YouTube Shorts description; do not invent gameplay details."
+  },
+  "publish": {
+    "enabled": false,
+    "privacy": "private",
+    "channel": "",
+    "category_id": "20",
+    "language": "en-US",
+    "audio_language": "en-US",
+    "tags": ["gta 6", "gta vi", "gaming", "shorts"],
+    "hashtags": "#GTA6 #GTAVI #Gaming #Shorts",
+    "title_suffix": " #Shorts",
+    "min_gap_minutes": 15,
+    "max_per_day": 6,
+    "compose_subtitles": true,
+    "upload_caption_tracks": true,
+    "caption_language": "en-US",
+    "ytk": "../youtube-kit/ytk",
+    "upload_timeout_seconds": 7200
+  },
+  "watchlist": {
+    "require_gta_title": true,
+    "channels": []
+  },
+  "retention": {
+    "delete_chunks": true,
+    "delete_job_output": true
+  }
+}

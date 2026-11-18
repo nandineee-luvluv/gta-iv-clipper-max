@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Hand a streaming link to the daemon. Everything after this is automatic:
+# probe, wait for the stream, record, detect chat spikes, cut, render,
+# subtitle, publish, clean up.
+set -euo pipefail
+SELF="$(readlink -f "${BASH_SOURCE[0]}")"
+HERE="$(cd "$(dirname "$SELF")" && pwd)"
+if [ "$#" -lt 1 ] || [ -z "${1:-}" ]; then
+  echo "usage: $0 <streaming-video-url>" >&2
+  exit 2
+fi
+exec "${AUTO_CLIP_PYTHON:-/usr/bin/python3}" "$HERE/auto_clip.py" submit "$1" --start

@@ -1,0 +1,20 @@
+[Unit]
+Description=gta-iv-clipper-max live stream spike detector and publisher
+After=network-online.target clippyme-backend.service
+Wants=network-online.target clippyme-backend.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=@AUTO_CLIP@
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONUNBUFFERED=1
+Environment=AUTO_CLIP_HOME=@AUTO_CLIP@
+ExecStart=@PYTHON@ -u auto_clip.py run
+Restart=always
+RestartSec=15
+TimeoutStopSec=60
+KillMode=mixed
+
+[Install]
+WantedBy=default.target
