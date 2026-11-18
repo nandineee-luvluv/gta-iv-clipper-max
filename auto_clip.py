@@ -94,7 +94,7 @@ DEFAULT_CONFIG = {
         "keep_source_seconds": 1800,
     },
     "chat": {
-        "enabled": False,
+        "enabled": True,
         "window_seconds": 10,
         "baseline_windows": 12,
         "min_history": 3,
@@ -128,7 +128,7 @@ DEFAULT_CONFIG = {
         ),
     },
     "publish": {
-        "enabled": True,
+        "enabled": False,
         "privacy": "private",
         "channel": "",
         "category_id": "20",
